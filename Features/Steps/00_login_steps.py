@@ -17,7 +17,6 @@ def step_impl(context):
 
 @when('the user enters "{username}" and "{password}"')
 def step_impl(context, username, password):
-    # Use the login method from LoginPage to enter credentials and click login
     context.login_page.login(USERNAME, PASSWORD)
 
 @then('the user should be able to log in to the application')

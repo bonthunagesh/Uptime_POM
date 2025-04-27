@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a24db70-0fc4-4bf2-b2f9-50b62e32e98f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Uptime_POM_Framework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Features/Login.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Features/Steps/login_steps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Login_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utilities/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment.py" afterDir="false" />
+    <list default="true" id="2a24db70-0fc4-4bf2-b2f9-50b62e32e98f" name="Changes" comment="Login.feature IS completed">
+      <change afterPath="$PROJECT_DIR$/Features/Steps/01_add_system_steps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Features/add_system.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Infrastructure_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Features/Steps/login_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/Steps/00_login_steps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/environment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "bonthunagesh"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/bonthunagesh/Uptime_POM",
+    "accountId": "b24ffa19-7e58-4e95-b980-b6bdb0734286"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -42,14 +50,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/BonthuNageshRao/Downloads/start-behave-py3.8-pip (1)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/BonthuNageshRao/Downloads/start-behave-py3.8-pip (1)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\BonthuNageshRao\PycharmProjects\Uptime_POM_Framework" />
@@ -71,6 +79,27 @@
       <option name="presentableId" value="Default" />
       <updated>1745480151046</updated>
     </task>
+    <task id="LOCAL-00001" summary="Login.feature IS completed">
+      <option name="closed" value="true" />
+      <created>1745496546675</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745496546675</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Login.feature IS completed">
+      <option name="closed" value="true" />
+      <created>1745496623390</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1745496623390</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Login.feature IS completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login.feature IS completed" />
   </component>
 </project>
