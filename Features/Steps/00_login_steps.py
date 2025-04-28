@@ -17,7 +17,6 @@ logging.basicConfig(
 )
 
 
-
 @given('the user is on the Login Page')
 def step_impl(context):
     print("Initializing driver in step_impl...")
