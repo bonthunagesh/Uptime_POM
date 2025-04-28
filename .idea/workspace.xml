@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a24db70-0fc4-4bf2-b2f9-50b62e32e98f" name="Changes" comment="3 Testcase written in POm Structure and working as expected">
+    <list default="true" id="2a24db70-0fc4-4bf2-b2f9-50b62e32e98f" name="Changes" comment="# 2 Test cases working with HTMl Report">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Features/Steps/00_login_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/Steps/00_login_steps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Features/Steps/01_add_system_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/Steps/01_add_system_steps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Features/Steps/02_Configuration_License.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/Steps/02_Configuration_License.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Execution.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Execution.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Configuration_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Configuration_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Infrastructure_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Infrastructure_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/behave_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/behave_report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +27,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master-1" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -28,12 +40,13 @@
     &quot;assignee&quot;: &quot;bonthunagesh&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/bonthunagesh/Uptime_POM&quot;,
-    &quot;accountId&quot;: &quot;b24ffa19-7e58-4e95-b980-b6bdb0734286&quot;
-  }
-}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/bonthunagesh/Uptime_POM",
+    "accountId": "b24ffa19-7e58-4e95-b980-b6bdb0734286"
+  },
+  "editorReviewEnabled": false
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -49,12 +62,13 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#1 on master-1",
+    "git-widget-placeholder": "master-Demo",
     "last_opened_file_path": "C:/Users/BonthuNageshRao/Downloads/start-behave-py3.8-pip (1)"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BonthuNageshRao\PycharmProjects\Uptime_POM_Framework\Reports" />
       <recent name="C:\Users\BonthuNageshRao\PycharmProjects\Uptime_POM_Framework" />
     </key>
   </component>
@@ -98,13 +112,22 @@
       <option name="project" value="LOCAL" />
       <updated>1745779344300</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="# 2 Test cases working with HTMl Report">
+      <option name="closed" value="true" />
+      <created>1745848094625</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745848094625</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Login.feature IS completed" />
     <MESSAGE value="2nd test case" />
     <MESSAGE value="3 Testcase written in POm Structure and working as expected" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 Testcase written in POm Structure and working as expected" />
+    <MESSAGE value="# 2 Test cases working with HTMl Report" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 2 Test cases working with HTMl Report" />
   </component>
 </project>

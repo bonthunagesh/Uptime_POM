@@ -6,7 +6,6 @@ from selenium.webdriver.support import expected_conditions as EC
 class ConfigurationPage:
     def __init__(self, driver):
         self.driver = driver
-        # Login page locators
         self.url = "http://localhost:9999/index.php?loggedout"
         self.username_field = (By.ID, "username")
         self.password_field = (By.ID, "password")

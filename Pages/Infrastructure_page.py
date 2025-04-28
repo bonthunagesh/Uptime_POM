@@ -62,7 +62,6 @@ class InfraPage:
         self.driver.refresh()
         logging.info("Switched back to original window and refreshed")
 
-    from selenium.common.exceptions import TimeoutException
 
     def verify_system_added(self, display_name="nagesh Localhost (Localhost)"):
         try:

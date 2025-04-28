@@ -52,3 +52,63 @@
 2025-04-28 19:15:29,789 - INFO - Switched back to original window and refreshed
 2025-04-28 19:15:31,806 - INFO - Local Network Device 'nagesh Localhost' found in the list
 2025-04-28 19:15:31,806 - INFO - Verified system 'nagesh Localhost' was added successfully
+2025-04-28 19:30:24,357 - INFO - User is on the Login Page
+2025-04-28 19:30:27,448 - INFO - User Enetred username and password
+2025-04-28 19:30:27,475 - INFO - Logged int o the application and itle is also matched
+2025-04-28 19:30:50,752 - INFO - User is on the Uptime Infrastructure Monitor dashboard
+2025-04-28 19:30:51,495 - INFO - Navigated to My Infrastructure
+2025-04-28 19:30:52,245 - INFO - Clicked Add System button
+2025-04-28 19:30:52,295 - INFO - New window detected
+2025-04-28 19:30:52,980 - INFO - Filled system details: nagesh Localhost, description, Localhost
+2025-04-28 19:30:53,097 - INFO - Clicked Save button
+2025-04-28 19:30:53,573 - INFO - Switched back to original window and refreshed
+2025-04-28 19:30:55,589 - INFO - Local Network Device 'nagesh Localhost' found in the list
+2025-04-28 19:30:55,590 - INFO - Verified system 'nagesh Localhost' was added successfully
+2025-04-28 19:34:47,615 - INFO - User is on the Login Page
+2025-04-28 19:34:50,520 - INFO - User Enetred username and password
+2025-04-28 19:34:50,542 - INFO - Logged int o the application and itle is also matched
+2025-04-28 19:35:14,615 - INFO - User is on the Uptime Infrastructure Monitor dashboard
+2025-04-28 19:35:15,375 - INFO - Navigated to My Infrastructure
+2025-04-28 19:35:16,134 - INFO - Clicked Add System button
+2025-04-28 19:35:16,197 - INFO - New window detected
+2025-04-28 19:35:16,651 - INFO - Filled system details: nagesh Localhost, description, Localhost
+2025-04-28 19:35:16,736 - INFO - Clicked Save button
+2025-04-28 19:35:17,285 - INFO - Switched back to original window and refreshed
+2025-04-28 19:35:19,300 - INFO - Local Network Device 'nagesh Localhost' found in the list
+2025-04-28 19:35:19,300 - INFO - Verified system 'nagesh Localhost' was added successfully
+2025-04-28 19:40:59,730 - INFO - User is on the Login Page
+2025-04-28 19:41:02,751 - INFO - User Enetred username and password
+2025-04-28 19:41:02,760 - INFO - Logged int o the application and itle is also matched
+2025-04-28 19:41:26,148 - INFO - User is on the Uptime Infrastructure Monitor dashboard
+2025-04-28 19:41:26,824 - INFO - Navigated to My Infrastructure
+2025-04-28 19:41:27,581 - INFO - Clicked Add System button
+2025-04-28 19:41:27,609 - INFO - New window detected
+2025-04-28 19:41:28,134 - INFO - Filled system details: nagesh Localhost, description, Localhost
+2025-04-28 19:41:28,229 - INFO - Clicked Save button
+2025-04-28 19:41:28,809 - INFO - Switched back to original window and refreshed
+2025-04-28 19:41:30,824 - INFO - Local Network Device 'nagesh Localhost' found in the list
+2025-04-28 19:41:30,824 - INFO - Verified system 'nagesh Localhost' was added successfully
+2025-04-28 19:44:49,125 - INFO - User is on the Login Page
+2025-04-28 19:44:51,986 - INFO - User Enetred username and password
+2025-04-28 19:44:52,004 - INFO - Logged int o the application and itle is also matched
+2025-04-28 19:45:15,044 - INFO - User is on the Uptime Infrastructure Monitor dashboard
+2025-04-28 19:45:15,676 - INFO - Navigated to My Infrastructure
+2025-04-28 19:45:16,418 - INFO - Clicked Add System button
+2025-04-28 19:45:16,439 - INFO - New window detected
+2025-04-28 19:45:17,012 - INFO - Filled system details: nagesh Localhost, description, Localhost
+2025-04-28 19:45:17,168 - INFO - Clicked Save button
+2025-04-28 19:45:17,734 - INFO - Switched back to original window and refreshed
+2025-04-28 19:45:19,746 - INFO - Local Network Device 'nagesh Localhost' found in the list
+2025-04-28 19:45:19,746 - INFO - Verified system 'nagesh Localhost' was added successfully
+2025-04-28 19:47:41,017 - INFO - User is on the Login Page
+2025-04-28 19:47:43,955 - INFO - User Enetred username and password
+2025-04-28 19:47:43,972 - INFO - Logged int o the application and itle is also matched
+2025-04-28 19:48:06,652 - INFO - User is on the Uptime Infrastructure Monitor dashboard
+2025-04-28 19:48:07,368 - INFO - Navigated to My Infrastructure
+2025-04-28 19:48:08,130 - INFO - Clicked Add System button
+2025-04-28 19:48:08,151 - INFO - New window detected
+2025-04-28 19:48:08,624 - INFO - Filled system details: nagesh Localhost, description, Localhost
+2025-04-28 19:48:08,719 - INFO - Clicked Save button
+2025-04-28 19:48:09,200 - INFO - Switched back to original window and refreshed
+2025-04-28 19:48:11,228 - INFO - Local Network Device 'nagesh Localhost' found in the list
+2025-04-28 19:48:11,228 - INFO - Verified system 'nagesh Localhost' was added successfully

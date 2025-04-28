@@ -6,7 +6,7 @@ from Utilities.config import USERNAME, PASSWORD, BASE_URL
 from selenium import webdriver
 
 from behave import *
-
+import allure
 
 log_file_path = r'C:\Users\BonthuNageshRao\PycharmProjects\Uptime_POM_Framework\Logs\Execution.log'
 
@@ -16,7 +16,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'  # Customize log format
 )
 
-
+@allure.step("Open login page")
 @given('the user is on the Login Page')
 def step_impl(context):
     print("Initializing driver in step_impl...")
@@ -27,11 +27,18 @@ def step_impl(context):
     context.login_page = LoginPage(context.driver)
     logging.info("User is on the Login Page")
 
+
+
+@allure.step("user enters username and password")
 @when('the user enters "{username}" and "{password}"')
 def step_impl(context, username, password):
     context.login_page.login(USERNAME, PASSWORD)
     logging.info("User Enetred username and password")
 
+
+
+
+@allure.step("the user should be able to log in to the application")
 @then('the user should be able to log in to the application')
 def step_impl(context):
 
