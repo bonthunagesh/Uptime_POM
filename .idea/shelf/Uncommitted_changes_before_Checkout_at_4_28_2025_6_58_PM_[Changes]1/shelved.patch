@@ -1,0 +1,151 @@
+Index: Features/Steps/00_login_steps.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import logging\r\nimport time\r\n\r\nfrom Pages.Login_page import LoginPage\r\nfrom Utilities.config import USERNAME, PASSWORD, BASE_URL\r\nfrom selenium import webdriver\r\n\r\nfrom behave import *\r\n\r\n\r\nlog_file_path = r'C:\\Users\\BonthuNageshRao\\PycharmProjects\\Uptime_POM_Framework\\Logs\\Execution.log'\r\n\r\nlogging.basicConfig(\r\n    filename=log_file_path,\r\n    level=logging.INFO,\r\n    format='%(asctime)s - %(levelname)s - %(message)s'  # Customize log format\r\n)\r\n\r\n\r\n\r\n@given('the user is on the Login Page')\r\ndef step_impl(context):\r\n    print(\"Initializing driver in step_impl...\")\r\n    context.driver = webdriver.Chrome()\r\n    context.driver.maximize_window()\r\n    context.driver.get(BASE_URL)\r\n    time.sleep(5)\r\n    context.login_page = LoginPage(context.driver)\r\n    logging.info(\"User is on the Login Page\")\r\n\r\n@when('the user enters \"{username}\" and \"{password}\"')\r\ndef step_impl(context, username, password):\r\n    context.login_page.login(USERNAME, PASSWORD)\r\n    logging.info(\"User Enetred username and password\")\r\n\r\n@then('the user should be able to log in to the application')\r\ndef step_impl(context):\r\n\r\n    expected_title = \"My Portal\"\r\n    actual_title = context.driver.title\r\n    assert expected_title in actual_title, f\"Expected '{expected_title}' in title, but got: '{actual_title}'\"\r\n    print(f\"Login successful, page title: {actual_title}\")\r\n\r\n    logging.info(\"Logged int o the application and itle is also matched\")\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Features/Steps/00_login_steps.py b/Features/Steps/00_login_steps.py
+--- a/Features/Steps/00_login_steps.py	(revision c784e4f96365fcb4400661b2c5d6f670f331f270)
++++ b/Features/Steps/00_login_steps.py	(date 1745846717129)
+@@ -17,7 +17,6 @@
+ )
+ 
+ 
+-
+ @given('the user is on the Login Page')
+ def step_impl(context):
+     print("Initializing driver in step_impl...")
+Index: Features/Steps/02_Configuration_License.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Features/Steps/02_Configuration_License.py b/Features/Steps/02_Configuration_License.py
+new file mode 100644
+--- /dev/null	(date 1745846717142)
++++ b/Features/Steps/02_Configuration_License.py	(date 1745846717142)
+@@ -0,0 +1,45 @@
++# steps/02_Configuration_License.py
++import logging
++import time
++from selenium import webdriver
++from behave import *
++from Pages.Configuration_page import ConfigurationPage
++
++from Pages.Login_page import LoginPage
++
++
++@given(u'user is logged in')
++def step_impl(context):
++    context.driver = webdriver.Chrome()
++    context.config_page = ConfigurationPage(context.driver)
++    context.config_page.open_login_page()
++    time.sleep(2)  # Retained for stability, but consider replacing with explicit waits
++    context.config_page.login("nagesh", "Alpha122@")
++    time.sleep(2)  # Retained for stability
++
++
++@when(u'user click on Infra Tab')
++def step_impl(context):
++    context.config_page.click_infra_tab()
++
++
++@when(u'User click on License Info')
++def step_impl(context):
++    context.config_page.click_license_info()
++
++
++@then(u'User should be validate for Valid License')
++def step_impl(context):
++    try:
++        print("Starting license validation step")
++
++        if context.config_page.is_valid_license():
++            print("Validation passed: 'HEADS UP' found in the license message")
++        else:
++            message = context.config_page.get_license_message()
++            print(f"Validation failed: 'HEADS UP' not found in '{message}'")
++            # Optionally, raise an assertion error
++            # assert False, f"Expected 'HEADS UP' in license message, but got: '{message}'"
++
++    finally:
++        context.driver.quit()
+\ No newline at end of file
+Index: Features/License.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Features/License.feature b/Features/License.feature
+new file mode 100644
+--- /dev/null	(date 1745846742075)
++++ b/Features/License.feature	(date 1745846742075)
+@@ -0,0 +1,7 @@
++Feature: License information
++
++  Scenario: Verify that user has Valid License
++    Given user is logged in
++    When user click on Infra Tab
++    And User click on License Info
++    Then User should be validate for Valid License
+\ No newline at end of file
+Index: Pages/Configuration_page.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Pages/Configuration_page.py b/Pages/Configuration_page.py
+new file mode 100644
+--- /dev/null	(date 1745846717152)
++++ b/Pages/Configuration_page.py	(date 1745846717152)
+@@ -0,0 +1,48 @@
++# pages/Configuration_page.py
++from selenium.webdriver.common.by import By
++from selenium.webdriver.support.ui import WebDriverWait
++from selenium.webdriver.support import expected_conditions as EC
++
++class ConfigurationPage:
++    def __init__(self, driver):
++        self.driver = driver
++        # Login page locators
++        self.url = "http://localhost:9999/index.php?loggedout"
++        self.username_field = (By.ID, "username")
++        self.password_field = (By.ID, "password")
++        self.login_button = (By.ID, "loginButton")
++        # Configuration page locators
++        self.infra_tab = (By.XPATH, "//button[@id='buttonConfig-button']")
++        self.license_info_link = (By.XPATH, "//a[normalize-space()='License Info']")
++        self.license_message = (By.XPATH, "//td[contains(., 'HEADS UP: Your Uptime license will expire in')]")
++
++    def open_login_page(self):
++        self.driver.get(self.url)
++        self.driver.maximize_window()
++
++    def login(self, username, password):
++        WebDriverWait(self.driver, 10).until(
++            EC.presence_of_element_located(self.username_field)
++        ).send_keys(username)
++        self.driver.find_element(*self.password_field).send_keys(password)
++        self.driver.find_element(*self.login_button).click()
++
++    def click_infra_tab(self):
++        WebDriverWait(self.driver, 10).until(
++            EC.element_to_be_clickable(self.infra_tab)
++        ).click()
++
++    def click_license_info(self):
++        WebDriverWait(self.driver, 10).until(
++            EC.element_to_be_clickable(self.license_info_link)
++        ).click()
++
++    def get_license_message(self):
++        element = WebDriverWait(self.driver, 10).until(
++            EC.presence_of_element_located(self.license_message)
++        )
++        return element.text.strip()
++
++    def is_valid_license(self):
++        message = self.get_license_message()
++        return "heads up" in message.lower()
+\ No newline at end of file

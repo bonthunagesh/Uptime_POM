@@ -28,3 +28,27 @@
 2025-04-28 10:15:31,315 - INFO - Switched back to original window and refreshed
 2025-04-28 10:15:33,330 - INFO - Local Network Device 'nagesh Localhost' found in the list
 2025-04-28 10:15:33,330 - INFO - Verified system 'nagesh Localhost' was added successfully
+2025-04-28 19:12:20,547 - INFO - User is on the Login Page
+2025-04-28 19:12:23,565 - INFO - User Enetred username and password
+2025-04-28 19:12:23,578 - INFO - Logged int o the application and itle is also matched
+2025-04-28 19:12:48,437 - INFO - User is on the Uptime Infrastructure Monitor dashboard
+2025-04-28 19:12:49,187 - INFO - Navigated to My Infrastructure
+2025-04-28 19:12:49,948 - INFO - Clicked Add System button
+2025-04-28 19:12:49,973 - INFO - New window detected
+2025-04-28 19:12:50,467 - INFO - Filled system details: nagesh Localhost, description, Localhost
+2025-04-28 19:12:50,564 - INFO - Clicked Save button
+2025-04-28 19:12:51,255 - INFO - Switched back to original window and refreshed
+2025-04-28 19:12:53,270 - INFO - Local Network Device 'nagesh Localhost' found in the list
+2025-04-28 19:12:53,271 - INFO - Verified system 'nagesh Localhost' was added successfully
+2025-04-28 19:14:59,472 - INFO - User is on the Login Page
+2025-04-28 19:15:02,430 - INFO - User Enetred username and password
+2025-04-28 19:15:02,440 - INFO - Logged int o the application and itle is also matched
+2025-04-28 19:15:26,876 - INFO - User is on the Uptime Infrastructure Monitor dashboard
+2025-04-28 19:15:27,505 - INFO - Navigated to My Infrastructure
+2025-04-28 19:15:28,314 - INFO - Clicked Add System button
+2025-04-28 19:15:28,342 - INFO - New window detected
+2025-04-28 19:15:29,036 - INFO - Filled system details: nagesh Localhost, description, Localhost
+2025-04-28 19:15:29,180 - INFO - Clicked Save button
+2025-04-28 19:15:29,789 - INFO - Switched back to original window and refreshed
+2025-04-28 19:15:31,806 - INFO - Local Network Device 'nagesh Localhost' found in the list
+2025-04-28 19:15:31,806 - INFO - Verified system 'nagesh Localhost' was added successfully
