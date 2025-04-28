@@ -1,27 +1,36 @@
 from selenium import webdriver
-from Pages.Login_page import LoginPage
-from Utilities.config import BASE_URL
+from webdriver_manager.chrome import ChromeDriverManager
+from Pages.login_page import LoginPage
+from Utilities.config import BASE_URL, USERNAME, PASSWORD
 
-print("Loading environment.py...")  # Debug to confirm file is loaded
+print("Loading environment.py...")
 
 def before_all(context):
     print("Inside before_all: Initializing browser...")
     try:
-        context.driver = webdriver.Chrome()
+        context.driver = webdriver.Chrome(ChromeDriverManager().install())
         context.driver.maximize_window()
-        context.driver.implicitly_wait(10)  # Added for stability, optional
-        context.driver.get(BASE_URL)
-        print(f"Browser initialized and navigated to {BASE_URL}")
+        context.driver.implicitly_wait(10)
+        print(f"Browser initialized")
     except Exception as e:
         print(f"Error in before_all: {e}")
         raise
 
+def before_scenario(context, scenario):
+    print(f"Before scenario: {scenario.name}")
+    try:
+        context.login_page = LoginPage(context.driver)
+        context.driver.get(BASE_URL)
+        context.login_page.login(USERNAME, PASSWORD)
+        print("Login completed")
+    except Exception as e:
+        print(f"Error in before_scenario: {e}")
+        raise
+
+def after_scenario(context, scenario):
+    print(f"After scenario: {scenario.name}")
+
 def after_all(context):
     print("Inside after_all: Closing browser...")
-    try:
-        if hasattr(context, 'driver'):
-            context.driver.quit()
-            print("Browser closed")
-    except Exception as e:
-        print(f"Error in after_all: {e}")
-        raise
+    if hasattr(context, 'driver'):
+        context.driver.quit()

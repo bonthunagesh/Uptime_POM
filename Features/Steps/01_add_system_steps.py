@@ -1,15 +1,38 @@
+import time
+
 from behave import given, when, then
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+from Pages.Login_page import LoginPage
+from Utilities.config import USERNAME, PASSWORD, BASE_URL
 from Pages.Infrastructure_page import InfraPage
+from selenium import webdriver
 import logging
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
+log_file_path = r'C:\Users\BonthuNageshRao\PycharmProjects\Uptime_POM_Framework\Logs\Execution.log'
+
+
+logging.basicConfig(
+    filename=log_file_path,  # Log file name
+    level=logging.INFO,  # Set the log level (INFO, DEBUG, WARNING, ERROR, CRITICAL)
+    format='%(asctime)s - %(levelname)s - %(message)s'  # Customize log format
+)
+
 
 @given('the user is on the Uptime Infrastructure Monitor dashboard')
 def step_user_on_dashboard(context):
-    # Assuming login is handled elsewhere, ensure driver is initialized
+    print("Initializing driver in step_impl...")
+
+    print("Initializing driver in step_impl...")
+    context.driver = webdriver.Chrome()
+    context.driver.maximize_window()
+    context.driver.get(BASE_URL)
+    time.sleep(5)
+
+    context.login_page = LoginPage(context.driver)
+    context.login_page.login(USERNAME, PASSWORD)
+
     assert context.driver is not None, "WebDriver not initialized"
     logging.info("User is on the Uptime Infrastructure Monitor dashboard")
 
@@ -38,6 +61,7 @@ def step_click_save(context):
 @when('the user switches back to the original window')
 def step_switch_to_original_window(context):
     context.infra_page.switch_to_original_window(context.original_window)
+    time.sleep(2)
 
 @then('the system "{display_name}" should be added successfully')
 def step_verify_system_added(context, display_name):

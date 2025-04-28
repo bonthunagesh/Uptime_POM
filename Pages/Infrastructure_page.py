@@ -1,8 +1,15 @@
+import time
 
+from selenium.common import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import logging
+
+from webdriver_manager.core import driver
+
+from Pages.Login_page import LoginPage
+
 
 class InfraPage:
     def __init__(self, driver):
@@ -14,6 +21,7 @@ class InfraPage:
         self.hostname_field = (By.NAME, "value_[hostname]")
         self.save_button = (By.XPATH, "//input[@value='Save']")
         self.system_added_locator = (By.XPATH, "//*[contains(text(), 'nagesh Localhost (Localhost)')]")
+        self.login_page = LoginPage(driver)
 
     def navigate_to_my_infrastructure(self):
         WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.my_infrastructure_button)).click()
@@ -54,7 +62,23 @@ class InfraPage:
         self.driver.refresh()
         logging.info("Switched back to original window and refreshed")
 
-    def verify_system_added(self):
-        system_added = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(self.system_added_locator))
-        logging.info("Local Network Device found in the list")
-        return system_added.is_displayed()
+    from selenium.common.exceptions import TimeoutException
+
+    def verify_system_added(self, display_name="nagesh Localhost (Localhost)"):
+        try:
+
+            system_added = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, f"//*[contains(text(), '{display_name}')]"))
+            )
+            logging.info(f"Local Network Device '{display_name}' found in the list")
+            return True
+        except TimeoutException:
+            logging.error(f"Local Network Device '{display_name}' not found within the given time.")
+            return False
+
+    def login(self, username, password):
+
+        self.enter_username(username)
+        self.enter_password(password)
+        self.click_login()
+        time.sleep(2)
