@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a24db70-0fc4-4bf2-b2f9-50b62e32e98f" name="Changes" comment="# 2 Test cases working with HTMl Report">
+    <list default="true" id="2a24db70-0fc4-4bf2-b2f9-50b62e32e98f" name="Changes" comment="Allure reporting Implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Features/Steps/00_login_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/Steps/00_login_steps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Features/Steps/01_add_system_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/Steps/01_add_system_steps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Features/Steps/02_Configuration_License.py" beforeDir="false" afterPath="$PROJECT_DIR$/Features/Steps/02_Configuration_License.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Execution.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Execution.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Configuration_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Configuration_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Infrastructure_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Infrastructure_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/behave_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/behave_report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745848094625</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Allure reporting Implemented">
+      <option name="closed" value="true" />
+      <created>1745849974672</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745849974672</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -128,6 +132,7 @@
     <MESSAGE value="2nd test case" />
     <MESSAGE value="3 Testcase written in POm Structure and working as expected" />
     <MESSAGE value="# 2 Test cases working with HTMl Report" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 2 Test cases working with HTMl Report" />
+    <MESSAGE value="Allure reporting Implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Allure reporting Implemented" />
   </component>
 </project>

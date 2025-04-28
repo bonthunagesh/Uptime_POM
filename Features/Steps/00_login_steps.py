@@ -26,6 +26,7 @@ def step_impl(context):
     time.sleep(5)
     context.login_page = LoginPage(context.driver)
     logging.info("User is on the Login Page")
+    allure.attach(context.driver.get_screenshot_as_png(), name="open_login_page", attachment_type=allure.attachment_type.PNG)
 
 
 
@@ -34,6 +35,7 @@ def step_impl(context):
 def step_impl(context, username, password):
     context.login_page.login(USERNAME, PASSWORD)
     logging.info("User Enetred username and password")
+    allure.attach(context.driver.get_screenshot_as_png(), name="enter_credentials", attachment_type=allure.attachment_type.PNG)
 
 
 
@@ -48,3 +50,4 @@ def step_impl(context):
     print(f"Login successful, page title: {actual_title}")
 
     logging.info("Logged int o the application and itle is also matched")
+    allure.attach(context.driver.get_screenshot_as_png(), name="login_success", attachment_type=allure.attachment_type.PNG)
